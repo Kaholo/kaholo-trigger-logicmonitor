@@ -1,0 +1,117 @@
+{
+  "name": "LogicMonitor-Trigger",
+  "type": "trigger",
+  "execProgram": "node",
+  "main": "app.js",
+  "imgUrl": "logo.png",
+  "version": "1.0.0",
+  "description": "LogicMonitor Webhook Integration",
+  "methods": [
+    {
+      "name": "alertWebhook",
+      "route": "post /webhook/logicmonitor/alert",
+      "viewName": "LogicMonitor Alert",
+      "params": [
+        {
+          "name": "status",
+          "viewName": "Alert Status",
+          "type": "options",
+          "options": [
+            {
+              "id": "any",
+              "name": "Any"
+            },
+            {
+              "id": "active",
+              "name": "Active"
+            },
+            {
+              "id": "ack",
+              "name": "Acknowledged"
+            },
+            {
+              "id": "clear",
+              "name": "Cleared"
+            },
+            {
+              "id": "update",
+              "name": "Update"
+            }
+          ]
+        },
+        {
+          "name": "alertType",
+          "viewName": "Alert Type",
+          "type": "options",
+          "options": [
+            {
+              "id": "any",
+              "name": "Any"
+            },
+            {
+              "id": "alert",
+              "name": "Alert"
+            },
+            {
+              "id": "eventAlert",
+              "name": "Event Alert"
+            },
+            {
+              "id": "batchJobAlert",
+              "name": "Batch Job Alert"
+            },
+            {
+              "id": "hostClusterAlert",
+              "name": "Host Cluster Alert"
+            },
+            {
+              "id": "websiteAlert",
+              "name": "Website Alert"
+            },
+            {
+              "id": "agentDownAlert",
+              "name": "Agent Down Alert"
+            },
+            {
+              "id": "agentFailoverAlert",
+              "name": "Agent Failover Alert"
+            },
+            {
+              "id": "agentFailBackAlert",
+              "name": "Agent FailBack Alert"
+            },
+            {
+              "id": "alertThrottledAlert",
+              "name": "Alert Throttled Alert"
+            }
+          ]
+        },
+        {
+          "name":"admin",
+          "viewName":"Assigned User",
+          "type": "string"
+        },
+        {
+          "name":"idPat",
+          "viewName":"Alert ID Pattern",
+          "type": "string"
+        },
+        {
+          "name":"hostPat",
+          "viewName":"Host Pattern",
+          "type": "string"
+        },
+        {
+          "name":"groupPat",
+          "viewName":"Group Pattern",
+          "type": "string"
+        },
+        {
+          "name":"levelPat",
+          "viewName":"Level Pattern",
+          "type": "string"
+        }
+      ]
+    }
+  ]
+}
