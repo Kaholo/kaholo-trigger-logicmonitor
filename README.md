@@ -13,8 +13,8 @@ This triggers whenever there is a logicmonitor alert.
 **{KAHOLO_URL}/webhook/logicmonitor/alert**
 
 ### Parameters
-1. Alert Status (Options) **Optional** - If specified accept only alert with the status specified. Possible values: Any | Active | Acknowledged | Cleared | Updated
-2. Alert Type (Options) **Optional** - If specified, only trigger when the alert matches the event type provided. Possible values: Any | Alert | Event Alert | Batch Job Alert | Host Cluster Alert | Website Alert | Agent Down Alert | Agent Failover Alert | Agent FailBack Alert | Alert Throttled Alert
+1. Alert Status (Options) **Optional** - If specified accept only alert with the status specified. Possible values: **Any | Active | Acknowledge | Clear | Update/Escalate | Test Alert**
+2. Alert Type (Options) **Optional** - If specified, only trigger when the alert matches the event type provided. Possible values: **Any | Alert | Event Alert | Batch Job Alert | Host Cluster Alert | Website Alert | Agent Down Alert | Agent Failover Alert | Agent FailBack Alert | Alert Throttled Alert**
 3. Assigned User (String) **Optional** - If specified, only trigger when the alert is assigned to the specified user.
 4. Alert ID Pattern (String) **Optional** - The alert ID or it's [micromatch pattern](https://github.com/micromatch/micromatch#micromatch----).
 5. Host Pattern (String) **Optional** - The host device name or it's [micromatch pattern](https://github.com/micromatch/micromatch#micromatch----).

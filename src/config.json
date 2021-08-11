@@ -4,7 +4,7 @@
   "execProgram": "node",
   "main": "app.js",
   "imgUrl": "logo.png",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "LogicMonitor Webhook Integration",
   "methods": [
     {
@@ -35,7 +35,11 @@
             },
             {
               "id": "update",
-              "name": "Update"
+              "name": "Update/Escalate"
+            },
+            {
+              "id": "test",
+              "name": "Test Alert"
             }
           ]
         },
