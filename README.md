@@ -6,6 +6,24 @@ After installing the trigger on Kaholo, follow the steps described [here](https:
 Also you can see more on connecting alert rules to integrations in [here](https://www.logicmonitor.com/support/alerts/integrations/what-does-logicmonitor-integrate-with).
 **Don't forget to also make sure you have the webhook configured to be your alert escalation destination!**
 
+### Alert Payload
+LogicMonitor expects you to provide the format of the payload sent to webhooks.
+This is the recommended format of payload to send to kaholo. You can also add any fields you want other than the ones specified.
+```json
+{
+    "group":"##HOSTGROUP##",
+    "host":"##HOST##",
+    "level":"##LEVEL##",
+    "alertType":"##ALERTTYPE##",
+    "alertStatus":"##ALERTSTATUS##",
+    "message":"##MESSAGE##",
+    "alertId":"##ALERTID##",
+    "admin":"##ADMIN##",
+    "start":"##START##",
+    "user":"##USER##"
+}
+```
+
 ## LogicMonitor Alert
 This triggers whenever there is a logicmonitor alert.
 
